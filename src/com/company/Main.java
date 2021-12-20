@@ -44,8 +44,10 @@ public class Main {
                     pers.setSex(data);
                 else if (index == 3)
                     pers.setBirth(data);
-                else if (index == 4)
-                    pers.setTitle(data);
+                else if (index == 4) {
+                    Division tmp= new Division(data);
+                    pers.setDivision(tmp);
+                }
                 else if (index == 5)
                     pers.setSalary(data);
                 else

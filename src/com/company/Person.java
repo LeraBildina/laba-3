@@ -1,22 +1,23 @@
 package com.company;
 
-public class Person extends Division {
+public class Person {
 
     private long id;
     private String name;
     private String sex;
     private String salary;
     private String birth;
+    private Division division;
 
     /**
-     * Конструктор c параметрами класса Person
-     * @param idDivision - id подразделения
+     * Конструктор c параметрами класса Person,
+     * заполняющий поле Divisison
+     * @param division_id - id подразделения
      * @param title - название подразделения
      */
 
-    public Person(long idDivision, String title) {
-        setIdDivision(idDivision);
-        setTitle(title);
+    public Person(long division_id, String title) {
+        setDivision(new Division(division_id,title));
     }
 
     /**
@@ -105,6 +106,22 @@ public class Person extends Division {
     public String getBirth() {
         return birth;
     }
+
+    /**
+     *Устаналивает Division
+     * @param
+     */
+    public void setDivision(Division division) {
+        this.division= division;
+    }
+
+    /**
+     *Возвращает Division
+     * @return
+     */
+    public Division getDivision() {
+        return division;
+    }
     //переопределение метода toString для удобства вывода на печать
 
     /**
@@ -113,7 +130,6 @@ public class Person extends Division {
      */
     @Override
     public String toString(){
-        return "\nID=" + getId() + " Name = " + getName() + " Sex = " + getSex() + " BirthData = " + getBirth() + " Division = " + getTitle() + " Salary = " + getSalary();
+        return "\nID=" + getId() + " Name = " + getName() + " Sex = " + getSex() + " BirthData = " + getBirth() + " Division = " + division.getTitle() + " Salary = " + getSalary();
     }
 }
-

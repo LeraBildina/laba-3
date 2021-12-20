@@ -5,10 +5,18 @@ public class Division {
     private long idDivision;
     private String title;
 
+    public Division(long id, String title){
+        this.idDivision = id;
+        this.title = title;
+    }
+
+    public Division( String title){
+        setTitle(title);
+    }
 
     /**
      * Присваивает значение переменной id
-     * @param id id Подразделения Человека
+     * @param id Подразделения Человека
      */
     public void setIdDivision(long id) {
         this.idDivision = id;
