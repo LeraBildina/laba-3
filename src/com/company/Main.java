@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * @author Byldina Valeria
+ * @version 2.1
+ */
 
 public class Main {
 

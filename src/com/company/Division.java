@@ -16,7 +16,7 @@ public class Division {
 
     /**
      * Получение значения переменной id Подразделения
-     * @return id Подразделения
+     * @return  id Подразделения
      */
     public long getIdDivision() {
         return idDivision;
